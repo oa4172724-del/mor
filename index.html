@@ -3,174 +3,64 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CyberX AI</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
-body{
- margin:0;font-family:Cairo,sans-serif;color:#fff;
- background:radial-gradient(circle at top,#172554,#080b18 55%,#050610);
- min-height:100vh
-}
-header{
- padding:22px 7%;display:flex;justify-content:space-between;
- align-items:center;border-bottom:1px solid #ffffff18;
- background:#090d20cc;position:sticky;top:0;z-index:5
-}
-.logo{font-size:25px;font-weight:900;color:#60a5fa}
-.logo span{color:#a78bfa}
-.container{max-width:1100px;margin:45px auto;padding:20px}
-.hero{text-align:center;margin-bottom:35px}
-.hero h1{font-size:38px;margin:10px}
-.hero h1 span{color:#a78bfa}
-.hero p{color:#aab5d0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.card{
- background:linear-gradient(145deg,#151d39,#0d1227);
- border:1px solid #5965aa55;border-radius:20px;padding:25px;
- cursor:pointer;transition:.3s
-}
-.card:hover{transform:translateY(-6px);border-color:#8b5cf6;box-shadow:0 10px 35px #6366f133}
-.card .icon{font-size:38px}
-.card h2{font-size:21px}
-.card p{color:#aab5d0;font-size:14px}
-button{
- border:0;border-radius:12px;padding:12px 20px;
- background:linear-gradient(90deg,#2563eb,#9333ea);
- color:white;font-family:inherit;font-weight:bold;cursor:pointer
-}
-button:hover{opacity:.85}
-.workspace{
- display:none;margin-top:30px;padding:25px;
- background:#10172d;border:1px solid #5965aa55;border-radius:20px
-}
-.workspace h2{color:#a78bfa}
-textarea{
- width:100%;min-height:130px;resize:vertical;
- background:#080d1d;color:white;border:1px solid #46527d;
- border-radius:12px;padding:15px;font-family:inherit;font-size:15px;
- outline:none
-}
-textarea:focus{border-color:#8b5cf6}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
-#preview{max-width:100%;max-height:220px;display:none;margin-top:15px;border-radius:12px}
-#result{
- display:none;margin-top:20px;padding:18px;border-radius:12px;
- background:#080d1d;border:1px solid #46527d;
- white-space:pre-wrap;line-height:1.9
-}
-.back{background:#303c60;margin-bottom:15px}
-footer{text-align:center;color:#7886a8;padding:35px}
-.status{color:#4ade80;font-size:12px}
-@media(max-width:600px){.hero h1{font-size:28px}header{padding:15px}}
+body{margin:0;background:#070b19;color:white;font-family:Arial,sans-serif}
+header{padding:22px;text-align:center;background:#101936;border-bottom:1px solid #344477}
+h1{color:#9b8cff;margin:0;font-size:32px}
+header p{color:#aab5d5}
+main{max-width:950px;margin:35px auto;padding:15px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card,.panel{background:#111a35;border:1px solid #344477;border-radius:18px;padding:22px}
+.card h2{color:#a78bfa}
+p{color:#b7c3df;line-height:1.7}
+button,a{display:inline-block;border:0;border-radius:10px;padding:12px 17px;
+background:linear-gradient(90deg,#2563eb,#9333ea);color:white;
+text-decoration:none;font-weight:bold;cursor:pointer;margin:5px}
+.panel{margin-top:22px}
+textarea{width:100%;height:120px;background:#080e20;color:white;
+border:1px solid #485784;border-radius:12px;padding:13px;font-size:16px}
+#answer{white-space:pre-wrap;line-height:1.8;margin-top:15px}
+footer{text-align:center;color:#7e8aaa;padding:25px}
 </style>
 </head>
 <body>
 <header>
- <div class="logo">CyberX <span>AI</span></div>
- <div class="status">● النظام التعليمي</div>
+<h1>CyberX AI</h1>
+<p>Smart Education Assistant</p>
 </header>
-
-<div class="container">
- <section class="hero">
-  <h1>مستقبلك الدراسي مع <span>CyberX AI</span></h1>
-  <p>مساعدك الذكي لفهم البرمجة والثقافة المالية خطوة بخطوة.</p>
- </section>
-
- <div class="cards" id="cards">
-  <div class="card" onclick="openAssistant('python')">
-   <div class="icon">💻</div>
-   <h2>Python Assistant</h2>
-   <p>اسأل عن أكواد Python ومفاهيم البرمجة وتدريبات Qureo.</p>
-   <button>افتح المساعد</button>
-  </div>
-
-  <div class="card" onclick="openAssistant('finance')">
-   <div class="icon">📊</div>
-   <h2>Financial Assistant</h2>
-   <p>افهم الثقافة المالية والمفاهيم الاقتصادية بطريقة سهلة.</p>
-   <button>افتح المساعد</button>
-  </div>
+<main>
+<div class="cards">
+ <div class="card">
+  <h2>💻 Qureo Python</h2>
+  <p>منصة البرمجة والتدريبات العملية.</p>
+  <a href="https://me-portal.qureo.education/" target="_blank">فتح المنصة</a>
+  <a href="https://me-tp.qureo.education/chapter/511025/lecture/511025010" target="_blank">فتح الدرس</a>
  </div>
-
- <section class="workspace" id="workspace">
-  <button class="back" onclick="goBack()">← رجوع</button>
-  <h2 id="assistantTitle">المساعد الذكي</h2>
-  <p style="color:#aab5d0">اكتب سؤالك أو ارفع صورة للتمرين.</p>
-
-  <textarea id="question" placeholder="اكتب السؤال هنا..."></textarea>
-
-  <div class="actions">
-   <label>
-    <input type="file" id="imageInput" accept="image/*" hidden>
-    <span class="button-label"><button type="button" onclick="document.getElementById('imageInput').click()">📷 رفع صورة</button></span>
-   </label>
-   <button onclick="sendQuestion()">إرسال السؤال ←</button>
-  </div>
-
-  <img id="preview" alt="معاينة الصورة">
-  <div id="result"></div>
- </section>
+ <div class="card">
+  <h2>📊 الثقافة المالية</h2>
+  <p>منصة الثقافة المالية والتدريبات.</p>
+  <a href="https://egy.app.spx-learning-square.com/login" target="_blank">فتح المنصة</a>
+ </div>
 </div>
 
-<footer>CyberX AI © 2026 — Educational Assistant</footer>
-
+<div class="panel">
+ <h2>🤖 CyberX AI Assistant</h2>
+ <p>اكتب سؤال التدريب للحصول على تحليل وشرح للحل.</p>
+ <textarea id="question" placeholder="اكتب السؤال هنا..."></textarea>
+ <button onclick="solve()">تحليل السؤال</button>
+ <div id="answer"></div>
+</div>
+</main>
+<footer>CyberX AI © 2026</footer>
 <script>
-let currentMode = "python";
-
-function openAssistant(mode){
- currentMode=mode;
- document.getElementById("cards").style.display="none";
- document.getElementById("workspace").style.display="block";
- document.getElementById("assistantTitle").textContent =
- mode==="python" ? "💻 مساعد Python و Qureo" : "📊 مساعد الثقافة المالية";
- document.getElementById("question").value="";
- document.getElementById("result").style.display="none";
- window.scrollTo({top:0,behavior:"smooth"});
-}
-
-function goBack(){
- document.getElementById("cards").style.display="grid";
- document.getElementById("workspace").style.display="none";
-}
-
-document.getElementById("imageInput").addEventListener("change",function(){
- const file=this.files[0];
- if(!file)return;
- if(!file.type.startsWith("image/")){
-  alert("من فضلك اختر صورة صحيحة");
-  return;
- }
- const reader=new FileReader();
- reader.onload=e=>{
-  const preview=document.getElementById("preview");
-  preview.src=e.target.result;
-  preview.style.display="block";
- };
- reader.readAsDataURL(file);
-});
-
-async function sendQuestion(){
- const question=document.getElementById("question").value.trim();
- const image=document.getElementById("imageInput").files[0];
- const result=document.getElementById("result");
-
- if(!question && !image){
-  alert("اكتب السؤال أو ارفع صورة أولاً");
-  return;
- }
-
- result.style.display="block";
- result.textContent="تم تجهيز سؤالك. لربط المساعد بالذكاء الاصطناعي، يجب إعداد خادم آمن وربط API.";
-
- /*
-   بعد تجهيز Backend آمن:
-   - أرسل السؤال والصورة إلى /api/chat
-   - الخادم يتصل بمزود الذكاء الاصطناعي
-   - لا تضع API Key هنا داخل المتصفح
- */
-
+function solve(){
+ const q=document.getElementById('question').value.trim();
+ const out=document.getElementById('answer');
+ if(!q){out.textContent='اكتب السؤال أولاً.';return;}
+ out.textContent='تم استلام السؤال. يلزم ربط خادم ذكاء اصطناعي آمن لتوليد الحل. هذه النسخة لا تنفذ الحل تلقائياً داخل المنصات بعد.';
 }
 </script>
 </body>

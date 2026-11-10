@@ -47,7 +47,7 @@ footer{font-size:12px;color:#d9b5d1;margin-top:20px}
     بقالنا شهرين ونص يا توتي مع بعض،<br>
     وربنا يديمك ليا يا روح قلبييي 💗
   </div>
-  <div class="love">بحبك يا ريتال</div>
+  <div class="love">بحبك يا بطتي</div>
   <div class="controls">
     <label class="file-label" for="song">🎵 اختار أغنية حب من جهازك</label>
     <input id="song" type="file" accept="audio/*">
